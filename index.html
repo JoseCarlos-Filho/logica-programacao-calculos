@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/app.js" defer></script>
+    <title>Lógica de programação</title>
+</head>
+<body>
+    <section class="container">
+        <div class="selecao__radio">
+            <input type="radio" id="opcao1" name="opcao" value="opcao-1">Consumo de Viagem</checkbox>
+            <input type="radio" id="opcao2" name="opcao" value="opcao-2">Palavra Palíndroma</checkbox>
+        </div>
+        <h1>Calculo de consumo de combustível</h1>
+        <label for="">Distancia</label>
+        <input type="number" id="distancia" placeholder="Digite a distância percorrida" step="0.01">
+        <label for="">Consumo médio do veiculo</label>
+        <input type="number" id="valor" placeholder="Digite o cunsumo em Km/l" step="0.01">
+        <label>Valor do litro de combustível</label>
+        <input type="number" id="preco" placeholder="Digite o valor do litro de combustível" step="0.01">
+        <label>Consumo</label>
+        <p id="consumo"></p>
+        <button id="calcular" onclick="calcularViagem()">Calcular</button>
+    </section>
+</body>
+</html>
