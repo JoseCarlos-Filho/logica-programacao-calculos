@@ -8,20 +8,25 @@
 </head>
 <body>
     <section class="container">
-        <div class="selecao__radio">
-            <input type="radio" id="opcao1" name="opcao" value="opcao-1">Consumo de Viagem</checkbox>
-            <input type="radio" id="opcao2" name="opcao" value="opcao-2">Palavra Palíndroma</checkbox>
+        <div class="container__radio">
+            <input type="radio" id="opcao1" name="opcao" value="opcao-1" class="container__radio--input">Consumo de Viagem</checkbox>
+            <input type="radio" id="opcao2" name="opcao" value="opcao-2" class="container__radio--input">Palavra Palíndroma</checkbox>
+            <input type="radio" id="opcao3" name="opcao" value="opcao-3" class="container__radio--input">Consumo de Energia</checkbox>
+            <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input">Consumo de água</checkbox>
+            <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input">Finança pessoal</checkbox>
         </div>
-        <h1>Calculo de consumo de combustível</h1>
-        <label for="">Distancia</label>
-        <input type="number" id="distancia" placeholder="Digite a distância percorrida" step="0.01">
-        <label for="">Consumo médio do veiculo</label>
-        <input type="number" id="valor" placeholder="Digite o cunsumo em Km/l" step="0.01">
-        <label>Valor do litro de combustível</label>
-        <input type="number" id="preco" placeholder="Digite o valor do litro de combustível" step="0.01">
-        <label>Consumo</label>
-        <p id="consumo"></p>
-        <button id="calcular" onclick="calcularViagem()">Calcular</button>
+        <div class="container__calculos">
+            <h1>Calculo de consumo de combustível</h1>
+            <label for="distancia">Distancia</label>
+            <input type="number" id="distancia" placeholder="Digite a distância percorrida" step="0.01">
+            <label for="valor">Consumo médio do veiculo</label>
+            <input type="number" id="valor" placeholder="Digite o consumo em Km/l" step="0.01">
+            <label for="preco">Valor do litro de combustível</label>
+            <input type="number" id="preco" placeholder="Digite o valor do litro de combustível" step="0.01">
+            <label>Consumo</label>
+            <p id="consumo"></p>
+            <button id="calcular" onclick="calcularViagem()">Calcular</button>
+        </div>
     </section>
 </body>
 </html>
