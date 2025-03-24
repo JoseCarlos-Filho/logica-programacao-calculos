@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
     <script src="js/app.js" defer></script>
     <title>Lógica de programação</title>
 </head>
 <body>
     <section class="container">
+        <h1 class="container__title">Bem vindo</h1>
+        <p class="container__text">Página de operações - escolha uma opção</p>
         <div class="container__radio">
-            <input type="radio" id="opcao1" name="opcao" value="opcao-1" class="container__radio--input">Consumo de Viagem</checkbox>
-            <input type="radio" id="opcao2" name="opcao" value="opcao-2" class="container__radio--input">Palavra Palíndroma</checkbox>
-            <input type="radio" id="opcao3" name="opcao" value="opcao-3" class="container__radio--input">Consumo de Energia</checkbox>
-            <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input">Consumo de água</checkbox>
-            <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input">Finança pessoal</checkbox>
+            <div class="container__radio-item">
+                <input type="radio" id="opcao1" name="opcao" value="opcao-1" class="container__radio--input"></checkbox>
+                <label for="opcao1">Consumo de Viagem</label>
+            </div>
+            <div class="container__radio-item">
+                <input type="radio" id="opcao2" name="opcao" value="opcao-2" class="container__radio--input"></checkbox>
+                <label for="opcao2">Palavra Palíndroma</label>
+            </div>
+            <div class="container__radio-item">
+                <input type="radio" id="opcao3" name="opcao" value="opcao-3" class="container__radio--input"></checkbox>
+                <label for="opcao3">Consumo de Energia</label>
+            </div>
+            <div class="container__radio-item">
+                <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input"></checkbox>
+                <label for="opcao4">Consumo de água</label>
+            </div>
+            <div class="container__radio-item">
+                <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input"></checkbox>
+                <label for="opcao5">Finança pessoal</label>
+            </div>
         </div>
         <div class="container__calculos">
-            <h1>Calculo de consumo de combustível</h1>
-            <label for="distancia">Distancia</label>
-            <input type="number" id="distancia" placeholder="Digite a distância percorrida" step="0.01">
-            <label for="valor">Consumo médio do veiculo</label>
-            <input type="number" id="valor" placeholder="Digite o consumo em Km/l" step="0.01">
-            <label for="preco">Valor do litro de combustível</label>
-            <input type="number" id="preco" placeholder="Digite o valor do litro de combustível" step="0.01">
-            <label>Consumo</label>
-            <p id="consumo"></p>
-            <button id="calcular" onclick="calcularViagem()">Calcular</button>
+            <h2>Calculo de consumo de combustível</h2>
+            <div class="container__calculos-item">
+                <label for="distancia">Distância</label>
+                <input type="number" id="distancia" placeholder="Digite a distância percorrida" step="0.01">
+            </div>
+            <div class="container__calculos-item">
+                <label for="valor">Consumo médio do veiculo</label>
+                <input type="number" id="valor" placeholder="Digite o consumo em Km/l" step="0.01">
+            </div>
+            <div class="container__calculos-item">
+                <label for="preco">Valor do litro de combustível</label>
+                <input type="number" id="preco" placeholder="Digite o valor do litro de combustível" step="0.01">
+            </div>
+            <button id="calcular" onclick="calcularViagem()" class="container__calculos-botao">Calcular</button>
+            <div class="container__calculos-item">
+                <label>Consumo</label>
+                <p id="resultado"></p>
+            </div>
         </div>
     </section>
 </body>
