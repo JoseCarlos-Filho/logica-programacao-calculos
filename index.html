@@ -29,11 +29,12 @@
                 <label for="opcao4">Consumo de água</label>
             </div>
             <div class="container__radio-item">
-                <input type="radio" id="opcao4" name="opcao" value="opcao-4" class="container__radio--input"></checkbox>
+                <input type="radio" id="opcao5" name="opcao" value="opcao-5" class="container__radio--input"></checkbox>
                 <label for="opcao5">Finança pessoal</label>
             </div>
         </div>
-        <div class="container__calculos">
+        <!-- Calculo de viagem -->
+        <div id="calculo1" class="container__calculos visibilidade">
             <h2>Calculo de consumo de combustível</h2>
             <div class="container__calculos-item">
                 <label for="distancia">Distância</label>
@@ -50,6 +51,19 @@
             <button id="calcular" onclick="calcularViagem()" class="container__calculos-botao">Calcular</button>
             <div class="container__calculos-item">
                 <label>Consumo</label>
+                <p id="resultado"></p>
+            </div>
+        </div>
+        <!-- Palavra palíndroma -->
+        <div id="calculo2" class="container__calculos visibilidade">
+            <h2>Verifica se a palavra é palíndroma</h2>
+            <div class="container__calculos-item">
+                <label for="palavra">Palavra</label>
+                <input type="text" id="palavra" placeholder="Digite a palavra">
+            </div>
+            <button id="calcular" onclick="palindroma()" class="container__calculos-botao">Verificar</button>
+            <div class="container__calculos-item">
+                <label>Palavra</label>
                 <p id="resultado"></p>
             </div>
         </div>
