@@ -1,0 +1,91 @@
+@import "/styles/reset.css";
+@import "/styles/componente.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+    background-image: url("/assets/programacao.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container__title {
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #f0bf2c;
+    font-weight: 700;
+    background-image: linear-gradient(90deg, #f5060e, #f2dc9c, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container__text {
+    position: absolute;
+    z-index: 1;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 400;
+    background-image: linear-gradient(90deg, #f5060e, #f2dc9c, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container__radio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 600px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container__radio-item {
+    display: grid; 
+    grid-template-columns: auto 1fr; 
+    align-items: center; 
+    gap: 5px;
+}
+
+.container__radio input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    justify-self: end;
+    cursor: pointer; 
+}
+
+.container__radio label {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    background-image: linear-gradient(90deg, #ffffff, #f2dc9c, #f5b906);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-self: start; /* Align the label to the left of its cell */
+}
