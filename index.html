@@ -33,6 +33,10 @@
                 <label for="opcao5">Finança pessoal</label>
             </div>
         </div>
+        <div class="container__info">
+            <img src="/assets/alura.png" alt="logo alura" class="container__info-img">
+            <p class="container__info-text">Desafio de lógica de programação</p>
+        </div>
         <!-- Calculo de viagem -->
         <div id="calculo1" class="container__calculos visibilidade">
             <h2>Calculo de consumo de combustível</h2>
@@ -41,17 +45,16 @@
                 <input type="number" id="distancia" placeholder="Digite a distância percorrida" step="0.01">
             </div>
             <div class="container__calculos-item">
-                <label for="valor">Consumo médio do veiculo</label>
-                <input type="number" id="valor" placeholder="Digite o consumo em Km/l" step="0.01">
+                <label for="abastecimento">Abastecimento do veículo</label>
+                <input type="number" id="abastecimento" placeholder="Digite a quantidade de litros abastecidos" step="0.01">
             </div>
             <div class="container__calculos-item">
-                <label for="preco">Valor do litro de combustível</label>
-                <input type="number" id="preco" placeholder="Digite o valor do litro de combustível" step="0.01">
+                <label for="preco-do-litro">Valor do litro de combustível</label>
+                <input type="number" id="preco-do-litro" placeholder="Digite o valor do litro de combustível" step="0.01">
             </div>
             <button id="calcular" onclick="calcularViagem()" class="container__calculos-botao">Calcular</button>
-            <div class="container__calculos-item">
-                <label>Consumo</label>
-                <p id="resultado"></p>
+            <div id="resultado-viagem" class="container__calculos-item">
+                <!-- <p id="resultadoViagem" class="container__calculos-resultado"></p> -->
             </div>
         </div>
         <!-- Palavra palíndroma -->
@@ -63,10 +66,58 @@
             </div>
             <button id="calcular" onclick="palindroma()" class="container__calculos-botao">Verificar</button>
             <div class="container__calculos-item">
-                <label>Palavra</label>
-                <p id="resultado"></p>
+                <p id="resultadoPalindroma" class="container__calculos-resultado"></p>
             </div>
         </div>
+        <!-- Consumo de energia -->
+        <div id="calculo3" class="container__calculos visibilidade">
+            <h2>Calculo de consumo de energia</h2>
+            <div class="container__calculos-item">
+                <label for="potencia">Watts</label>
+                <input type="number" id="potencia" placeholder="Digite a potência em Watts" step="0.01">
+            </div>
+            <div class="container__calculos-item">
+                <label for="horas">Horas de uso</label>
+                <input type="number" id="horas" placeholder="Digite as horas de uso do aparelho" step="0.01">
+            </div>
+            <div class="container__calculos-item">
+                <label for="dia">Dias de uso</label>
+                <input type="number" id="dia" placeholder="Digite os dias de uso do aparelho" step="0.01">
+            </div>
+            <button id="calcular" onclick="calcularEnergia()" class="container__calculos-botao">Calcular</button>
+            <div class="container__calculos-item">
+                <p id="resultadoEnergia" class="container__calculos-resultado"></p>
+            </div>
+        </div>
+        <!-- Consumo de água -->
+        <div id="calculo4" class="container__calculos visibilidade">
+            <h2>Calculo de consumo de água residêncial</h2>
+            <div class="container__calculos-item">
+                <label for="anterior">Leitura anterior</label>
+                <input type="number" id="anterior" placeholder="Digite a leitura do mês anterior" step="0.01">
+            </div>
+            <div class="container__calculos-item">
+                <label for="atual">Leitura atual</label>
+                <input type="number" id="atual" placeholder="Digite a leitura do mês atual" step="0.01">
+            </div>
+            <button id="calcular" onclick="calcularAgua()" class="container__calculos-botao">Calcular</button>
+            <div class="container__calculos-item">
+                <p id="resultadoAgua" class="container__calculos-resultado"></p>
+            </div>
+        </div>
+        <!-- Finança pessoal -->
+        <div id="calculo5" class="container__calculos visibilidade">
+            <h2>Calculo financeiro pessoal</h2>
+            <div class="container__calculos-item">
+                <label for="financeiro">Renda mensal</label>
+                <input type="number" id="financeiro" placeholder="Digite o valor da renda mensal" step="0.01">
+            </div>
+            <button id="calcular" onclick="calcularFinanceiro()" class="container__calculos-botao">Calcular</button>
+            <div class="container__calculos-item">
+                <p id="resultadoFinanceiro" class="container__calculos-resultado"></p>
+            </div>
+        </div>
+        <button id="inicio" onclick="inicio()" class="container__button hidden">Inicio</button>
     </section>
 </body>
 </html>
