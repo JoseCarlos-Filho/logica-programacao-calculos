@@ -34,7 +34,7 @@ h2 {
 }
 
 .container__calculos-item input {
-    width: 250px;
+    width: 280px;
     height: 25px;
     border-radius: 5px;
     border: 2px solid #000000;
@@ -52,6 +52,13 @@ h2 {
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.container__calculos-resultado {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: oblique;;
 }
 
 .visibilidade {
