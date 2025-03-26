@@ -77,3 +77,32 @@ function calcularViagem() {
 
     limparCampos();
 }
+
+function calcularPalindroma() {
+    let palavra = document.getElementById("palavra").value;
+    let resultadoPalindroma = document.getElementById("resultado-palindroma");
+    
+    if (palavra === '') {
+        alert("Preencha o campo!");
+        return;
+    }
+
+    let uppercasePalavra = palavra.toUpperCase();
+
+    let palavraInvertida = palavra.split('').reverse().join('').toUpperCase();
+
+    if (uppercasePalavra !== palavraInvertida) {
+        resultadoPalindroma.innerHTML = `
+            <p id="resultadoPalindroma" class="container__calculos-resultado">
+                A palavra "${palavra}" não é um palíndromo.
+            </p>
+        `
+    } else {
+        resultadoPalindroma.innerHTML = `
+            <p id="resultadoPalindroma" class="container__calculos-resultado">
+                A palavra "${palavra}" é um palíndromo.
+            </p>
+        `
+    }
+
+}
