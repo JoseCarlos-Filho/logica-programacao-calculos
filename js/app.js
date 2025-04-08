@@ -53,7 +53,9 @@ function limparCampos() {
     document.getElementById("palavra").value = '';
     document.getElementById("potencia").value = '';
     document.getElementById("horas").value = '';
-   document.getElementById("dia").value = '';
+    document.getElementById("dia").value = '';
+    document.getElementById("anterior").value = '';
+    document.getElementById("atual").value = '';
 }
 
 function calcularViagem() {
@@ -157,4 +159,38 @@ function calcularEnergia() {
     `
     limparCampos();
     
+}
+
+function calcularAgua() {
+    let consumoAnterior = document.getElementById("anterior").value;
+    let consumoAtual = document.getElementById("atual").value;
+    const resultadoAgua = document.getElementById("resultado-agua");
+    
+    if (!consumoAnterior || !consumoAtual) {
+        alert("Preencha todos os campos!");
+        limparCampos();
+        return;
+    }
+
+    if (consumoAnterior <= 0 || consumoAtual <= 0) {
+        alert("Digite valores maiores que zero!");
+        limparCampos();
+        return;
+    }
+
+    if (consumoAnterior >= consumoAtual) {
+        alert("Dados inconsistente! leitura anterior maior que leitura atual");
+        limparCampos();
+        return;
+    }
+
+    log(document.querySelector(".container__radio-item input").value);
+    const consumoTotal = consumoAtual - consumoAnterior;
+    resultadoAgua.innerHTML = `
+         <p id="resultadoAgua" class="container__calculos-resultado">
+            O consumo total de água em metros cúbicos foi de: ${consumoTotal} m³.<br>
+            O consumo total de água em litros foi de: ${consumoTotal*1000} litros.
+         </p>
+    `
+    limparCampos();
 }
