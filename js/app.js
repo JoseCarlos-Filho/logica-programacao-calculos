@@ -50,6 +50,10 @@ function limparCampos() {
     document.getElementById("distancia").value = '';
     document.getElementById("abastecimento").value = '';
     document.getElementById("preco-do-litro").value = '';
+    document.getElementById("palavra").value = '';
+    document.getElementById("potencia").value = '';
+    document.getElementById("horas").value = '';
+   document.getElementById("dia").value = '';
 }
 
 function calcularViagem() {
@@ -97,12 +101,60 @@ function calcularPalindroma() {
                 A palavra "${palavra}" não é um palíndromo.
             </p>
         `
+        limparCampos();
     } else {
         resultadoPalindroma.innerHTML = `
             <p id="resultadoPalindroma" class="container__calculos-resultado">
                 A palavra "${palavra}" é um palíndromo.
             </p>
         `
+        limparCampos();
     }
 
+}
+
+function calcularEnergia() {
+    let potencia = document.getElementById("potencia").value;
+    let horasDeUso = document.getElementById("horas").value;
+    let diasDeUso = document.getElementById("dia").value;
+    let totalDoConsumoDeEnergia = document.getElementById("resultado-energia");
+
+    if (!potencia || !horasDeUso || !diasDeUso) {
+        alert("Preencha todos os campos!");
+        limparCampos();
+        return;
+    } 
+    
+    if (potencia <= 0 ||  horasDeUso <= 0 || diasDeUso <= 0) {
+        alert("Preencha os campos com valores maiores que zero!");
+        limparCampos();
+        return;
+    }
+    
+    if (potencia > 6500) {
+        alert("Potencia do aparelho excedida! potencia máxima: 6500W");
+        limparCampos();
+        return;
+    }
+    
+    if (horasDeUso > 24) {
+        alert("Horas de uso excedidas! tempo máximo: 24h");
+        limparCampos();
+        return;
+    }
+    
+    if (diasDeUso > 30) {
+        alert("Dias de uso excedidos! dias máximo: 30 dias");
+        limparCampos();
+        return;
+    } 
+    
+    const totalDoConsumo = (potencia * horasDeUso * diasDeUso) / 1000;
+    totalDoConsumoDeEnergia.innerHTML = `
+        <p id="resultadoEnergia" class="container__calculos-resultado">
+            O consumo total de energia foi de: ${totalDoConsumo.toFixed(2)} kWh.
+        </p>
+    `
+    limparCampos();
+    
 }
