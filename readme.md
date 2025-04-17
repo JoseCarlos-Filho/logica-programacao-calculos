@@ -1,6 +1,6 @@
 # Multi-Calculadora Web - Lógica JS Desafio 3
 
-[Imagem do Site](./assets/programacao.png)
+![Imagem do Site](./assets/programacao.png)
 
 ## Descrição
 
