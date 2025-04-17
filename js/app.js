@@ -56,6 +56,7 @@ function limparCampos() {
     document.getElementById("dia").value = '';
     document.getElementById("anterior").value = '';
     document.getElementById("atual").value = '';
+    document.getElementById("financeiro").value = '';
 }
 
 function calcularViagem() {
@@ -191,6 +192,39 @@ function calcularAgua() {
             O consumo total de água em metros cúbicos foi de: ${consumoTotal} m³.<br>
             O consumo total de água em litros foi de: ${consumoTotal*1000} litros.
          </p>
+    `
+    limparCampos();
+}
+
+function calcularFinanceiro() {
+    let renda = document.getElementById("financeiro");
+    let rendaLiquida = parseFloat(renda.value);
+    let resultadoFinanceiro = document.getElementById("resultado-financeiro");
+
+    if (!rendaLiquida) {
+        alert("Preencha o campo corretamente!");
+        limparCampos();
+        return;
+    }
+
+    if (isNaN(rendaLiquida) || rendaLiquida < 1518) {
+        alert("Renda líquida deve ser maior ou igual ao salário mínimo!");
+        limparCampos();
+        return;
+    }
+
+    let custosEssenciais = rendaLiquida * 0.50;
+    let custosPessoais = rendaLiquida * 0.30;
+    let reservaFinanceira = rendaLiquida * 0.20;
+
+    resultadoFinanceiro.innerHTML = `
+        <p id="resultadoFinanceiro" class="container__calculos-resultado">
+            Sua renda Líquida é de: R$ ${rendaLiquida.toFixed(2)} reais. <br><br>
+            Os custos essenciais são de: R$ ${custosEssenciais.toFixed(2)} reais. <br><br>
+            Os custos pessoais são de: R$ ${custosPessoais.toFixed(2)} reais. <br><br>
+            A reserva financeira é de: R$ ${reservaFinanceira.toFixed(2)} reais.<br>
+            Base de calculo 50/30/20.
+        </p>
     `
     limparCampos();
 }
