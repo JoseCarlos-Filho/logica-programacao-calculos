@@ -2,9 +2,11 @@ const {log} = console;
 const elementoOpcoes = document.querySelectorAll(".container__radio-item input");
 const elementoInfo = document.querySelector(".container__info");
 const btnInicio = document.getElementById("inicio");
+const elementoBody = document.body;
 
 elementoOpcoes.forEach(opcao => {
     opcao.addEventListener("click", () => {
+        elementoBody.classList.add("radio-selecionado-mobile");
         let id = opcao.value;
         if (id === "opcao-1") {
             mostraElemento(id);
